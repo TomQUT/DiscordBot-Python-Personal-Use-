@@ -12,4 +12,8 @@ intents.message_content = True
 
 client = discord.client(intents=intents)
 
+@client.event
+async def on_ready():
+    print(f'Discord bot Python version {client.user.name}')
+
 
